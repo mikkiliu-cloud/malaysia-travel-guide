@@ -15,8 +15,8 @@ try {
   const nav = document.getElementById('topnav');
   if (nav) {
     const current = document.body.dataset.page || '';
-    let html = '<a class="brand" href="index.html">BAZAAR · TH</a>';
-    html += '<a class="nav-link' + (current === 'home' ? ' active' : '') + '" href="index.html">首页</a>';
+    let html = '<a class="brand" href="thailand.html">BAZAAR · TH</a>';
+    html += '<a class="nav-link' + (current === 'home' ? ' active' : '') + '" href="thailand.html">首页</a>';
     THAI_CITIES.forEach(c => {
       const active = current === c.key ? ' active' : '';
       html += '<a class="nav-link' + active + '" href="' + c.key + '.html">' + c.cn + '</a>';
@@ -27,7 +27,7 @@ try {
   // ---- 页脚导航 ----
   const fnav = document.getElementById('footer-nav');
   if (fnav) {
-    let html = '<a href="index.html">首页</a>';
+    let html = '<a href="thailand.html">首页</a>';
     THAI_CITIES.forEach(c => { html += '<a href="' + c.key + '.html">' + c.cn + '</a>'; });
     fnav.innerHTML = html;
   }
