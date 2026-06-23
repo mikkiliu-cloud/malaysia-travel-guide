@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰国市集攻略 · 全国市集地图 · 每城一页</title>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+<nav class="topnav" id="topnav"></nav>
+<div class="magazine">
+
+  <header class="hero">
+    <div class="hero-eyebrow">Street Market Edition · Thailand</div>
+    <h1>泰 国 市 集 攻 略</h1>
+    <h2>The Thai Market Atlas — One Page per City</h2>
+    <div class="from-tag">★ 夜市 · 水上市场 · 创意市集 · 铁道市场 ★</div>
+    <div class="hero-stats">
+      <div class="stat"><div class="num">26</div><div class="label">Markets</div></div>
+      <div class="stat"><div class="num">6</div><div class="label">Cities</div></div>
+      <div class="stat"><div class="num">10</div><div class="label">★ Highlights</div></div>
+      <div class="stat"><div class="num">9</div><div class="label">Market Types</div></div>
+    </div>
+  </header>
+
+  <div class="issue-bar">
+    <div class="logo">BAZAAR · TH</div>
+    <div>Vol. 01 · 泰国市集深度版</div>
+    <div>2026.06.16</div>
+  </div>
+
+  <div class="editor-note">
+    <p>第一次逛札都甲是在曼谷的雨季午后，15,000 个摊位像一座永远走不完的迷宫；后来在美功，我学会了听见汽笛就立刻收脚，看火车贴着鱼摊缓缓驶过。那一刻我才懂，泰国市集从不为游客而生——它就是生活本身。</p>
+    <p>这本攻略覆盖 <strong>全泰 6 座城市、26 个市集</strong>，并按你的要求做成 <strong>每个城市一个独立页面</strong>：点下面的城市卡片或顶部导航即可进入。每页都能按类型筛选、搜索、收藏，并附该城专属的主题路线。</p>
+    <p>带上现金、空胃和一双好走的鞋，从你最想去的城市开始吧。</p>
+    <div class="signature">— 你的市集向导，Bazaar</div>
+  </div>
+
+  <div class="overview-grid">
+    <div class="ov"><div class="icon">💱</div><div class="label">Currency</div><div class="value">THB 泰铢 · 1≈¥0.2</div></div>
+    <div class="ov"><div class="icon">🌤️</div><div class="label">Best Season</div><div class="value">11–2 月 凉季</div></div>
+    <div class="ov"><div class="icon">🕒</div><div class="label">Tips</div><div class="value">带现金 · 傍晚出动</div></div>
+    <div class="ov"><div class="icon">🛺</div><div class="label">Get Around</div><div class="value">Grab · BTS · 双条车</div></div>
+  </div>
+
+  <!-- ===== 城市分页入口 ===== -->
+  <section>
+    <span class="section-tag">Choose a City</span>
+    <h2 class="section-title">选择城市 · 进入分页</h2>
+    <p class="section-subtitle">Each city has its own page — markets, filters & routes inside.</p>
+    <div class="city-tiles" id="city-tiles"></div>
+  </section>
+
+  <!-- ===== 地图 ===== -->
+  <div class="map-section">
+    <div class="map-wrap">
+      <h3>🗺️ 泰国市集地图 · 点城市进入分页</h3>
+      <p class="map-hint">Map of Thailand — 点任意城市进入它的市集页。金星★ = 精华市集集中地</p>
+      <svg class="th-map" viewBox="0 0 460 640" xmlns="http://www.w3.org/2000/svg">
+        <rect width="460" height="640" class="th-sea"/>
+        <path class="th-region" d="M 210 30 Q 250 40 255 80 Q 250 120 230 150 Q 250 175 270 200 Q 300 215 305 250 Q 295 285 255 295 Q 235 300 230 330 Q 235 380 250 420 Q 240 460 215 470 Q 205 500 195 540 Q 188 575 175 600 Q 165 615 158 595 Q 162 555 172 520 Q 180 480 178 440 Q 172 400 175 360 Q 168 320 150 300 Q 120 285 110 255 Q 118 225 145 215 Q 160 195 155 165 Q 140 135 150 100 Q 165 55 210 30 Z"/>
+        <text x="300" y="120" class="th-region-label">NORTH</text>
+        <text x="300" y="260" class="th-region-label">CENTRAL</text>
+        <text x="120" y="560" class="th-region-label" transform="rotate(-12 120 560)">SOUTH</text>
+
+        <circle class="th-pin-star" data-city="chiangmai" cx="168" cy="115" r="7"/>
+        <text class="th-pin-label" data-city="chiangmai" x="178" y="119">清迈 ★</text>
+
+        <circle class="th-pin-home" data-city="bangkok" cx="205" cy="300" r="8"/>
+        <text class="th-pin-label home" data-city="bangkok" x="216" y="304">曼谷 BKK</text>
+
+        <circle class="th-pin" data-city="ayutthaya" cx="200" cy="275" r="5"/>
+        <text class="th-pin-label" data-city="ayutthaya" x="150" y="270">大城</text>
+
+        <circle class="th-pin-star" data-city="huahin" cx="190" cy="370" r="6"/>
+        <text class="th-pin-label" data-city="huahin" x="130" y="374">华欣 ★</text>
+
+        <circle class="th-pin" data-city="pattaya" cx="248" cy="320" r="5"/>
+        <text class="th-pin-label" data-city="pattaya" x="258" y="324">芭提雅</text>
+
+        <circle class="th-pin-star" data-city="phuket" cx="160" cy="565" r="7"/>
+        <text class="th-pin-label" data-city="phuket" x="170" y="569">普吉 ★</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ===== CALENDAR ===== -->
+  <section style="background: var(--paper-dark);">
+    <span class="section-tag">When to Go</span>
+    <h2 class="section-title">市集季节 · 节庆日历</h2>
+    <p class="section-subtitle">逢节庆，市集格外热闹——挑对时间，体验加倍。</p>
+    <div class="calendar">
+      <div class="cal"><div class="month">NOV – FEB</div><h5>凉季 · 最佳</h5><p>11–2 月凉爽干燥，逛夜市最舒服，也是旅游旺季。</p></div>
+      <div class="cal"><div class="month">APRIL</div><h5>泼水节 Songkran</h5><p>4/13–15 全国泼水狂欢，市集与街头化身大型水仗现场。</p></div>
+      <div class="cal"><div class="month">NOV</div><h5>水灯节 Loy Krathong</h5><p>满月夜放水灯、清迈放天灯，河畔与古城市集最浪漫。</p></div>
+      <div class="cal"><div class="month">OCT</div><h5>九皇斋节</h5><p>普吉素食节，老城与市场遍布黄旗素食摊，气氛独特。</p></div>
+      <div class="cal"><div class="month">MAR – MAY</div><h5>热季</h5><p>白天炎热，市集建议傍晚后再出动，随身带水防暑。</p></div>
+      <div class="cal"><div class="month">JUN – OCT</div><h5>雨季</h5><p>午后阵雨为主，安帕瓦看萤火虫此时最佳；带雨具。</p></div>
+      <div class="cal"><div class="month">EVERY WEEKEND</div><h5>周末限定</h5><p>札都甲、清迈步行街、华欣创意市集等仅周末开放。</p></div>
+      <div class="cal"><div class="month">DAILY</div><h5>天天有夜市</h5><p>乔德、唐人街、清迈夜市、华欣夜市等每天营业，不挑日子。</p></div>
+    </div>
+  </section>
+
+  <!-- ===== TIPS ===== -->
+  <section>
+    <span class="section-tag">Survival Guide</span>
+    <h2 class="section-title">逛市集 · 实用 Tips</h2>
+    <p class="section-subtitle">老司机踩坑后的实话，省钱又省心。</p>
+    <div class="tip-grid">
+      <div class="tip-block do">
+        <h4>✓ 该做的</h4>
+        <ul>
+          <li>带足<strong>现金（小面额泰铢）</strong>，多数摊位不收卡</li>
+          <li>傍晚再出动，避开白天暴晒；穿好走的鞋</li>
+          <li>买衣饰、手作大胆<strong>还价</strong>，常可砍到 6–7 折</li>
+          <li>海鲜大排档<strong>先看价目表、确认单价</strong>再下单</li>
+          <li>用 <strong>Grab</strong> 叫车或双条车，比路边喊价更透明</li>
+          <li>随身带湿纸巾、肠胃药；空腹来才能多吃几摊</li>
+        </ul>
+      </div>
+      <div class="tip-block dont">
+        <h4>✗ 别踩的坑</h4>
+        <ul>
+          <li>别在游客向夜市不还价就买，价格常翻倍</li>
+          <li>水上市场上船前<strong>没谈好价</strong>，易被加收费用</li>
+          <li>别忽视<strong>泰国国歌</strong>（18:00 / 08:00），响起请起立</li>
+          <li>生冷海鲜挑人多、翻台快的摊，避免肠胃不适</li>
+          <li>贵重物品别露白，人挤人时看好背包前侧</li>
+          <li>丹嫩沙朵等热门水上市场避开正午，又热又挤</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-title">市集，是泰国的心跳</div>
+    <div class="footer-quote">"Eat with your hands, bargain with a smile."</div>
+    <div class="footer-nav" id="footer-nav"></div>
+    <p class="meta">BAZAAR · TH · VOL.01 · 6 CITIES · 26 MARKETS · 2026</p>
+  </footer>
+
+</div>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

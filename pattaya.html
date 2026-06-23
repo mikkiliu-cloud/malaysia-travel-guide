@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰国市集攻略</title>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="pattaya">
+<nav class="topnav" id="topnav"></nav>
+
+<header class="page-hero">
+  <div class="ph-icon" id="ph-icon"></div>
+  <h1 id="ph-title"></h1>
+  <div class="ph-en" id="ph-en"></div>
+  <div class="ph-sub" id="ph-sub"></div>
+  <div class="ph-count" id="ph-count"></div>
+</header>
+
+<div class="filter-bar">
+  <span class="label">筛选</span>
+  <input type="text" id="search-input" class="search-input" placeholder="🔍 搜市集名 / 必吃…">
+  <select id="type-filter" class="select-input"><option value="all">全部类型</option></select>
+  <button class="filter-btn" data-fav="1">❤ 我的清单 (<span id="fav-count">0</span>)</button>
+  <button class="filter-btn active" data-cat="all">全部</button>
+  <button class="filter-btn" data-cat="highlight">★ 精华</button>
+  <span class="filter-info" id="filter-info"></span>
+</div>
+
+<div class="magazine">
+  <section id="markets">
+    <span class="section-tag">The Markets</span>
+    <h2 class="section-title">本城市集</h2>
+    <p class="section-subtitle">营业时间 · 怎么去 · 必吃 · 避坑提示，一卡看全。</p>
+    <div class="dest-grid" id="grid"></div>
+  </section>
+
+  <section id="routes" style="background: var(--paper-dark);">
+    <span class="section-tag">Themed Routes</span>
+    <h2 class="section-title">本城主题路线</h2>
+    <p class="section-subtitle">把同城市集串成一天。</p>
+    <div class="themed-grid"></div>
+  </section>
+
+  <footer>
+    <div class="footer-title">逛完这座城，再去下一站</div>
+    <div class="footer-quote">"Eat with your hands, bargain with a smile."</div>
+    <div class="footer-nav" id="footer-nav"></div>
+    <p class="meta">BAZAAR · TH · VOL.01 · 2026</p>
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
